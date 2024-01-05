@@ -15,5 +15,5 @@ func (p *Parser) Parse(query string) ([]string, error) {
 		return nil, err
 	}
 
-	return tokens, err
+	return tokens, nil
 }
