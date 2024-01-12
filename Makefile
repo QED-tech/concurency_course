@@ -1,6 +1,9 @@
 run-server: build server
 test: gen unit
 
+install:
+	go mod tidy
+
 build:
 	rm bin/client bin/server 2>/dev/null || true
 	go build -race -o bin/server cmd/server/main.go && chmod +x bin/server
